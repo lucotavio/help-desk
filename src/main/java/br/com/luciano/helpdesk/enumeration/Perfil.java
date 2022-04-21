@@ -5,9 +5,9 @@ import lombok.Getter;
 @Getter
 public enum Perfil {
 
-	ABERTO (0, "ROLE_ADMIN"),
-	ANDAMENTO (1, "ROLE_CLIENTE"), 
-	ENCERRADO (2, "ROLE_TECNICO");
+	ADMIN (0, "ROLE_ADMIN"),
+	CLIENTE (1, "ROLE_CLIENTE"), 
+	TECNICO (2, "ROLE_TECNICO");
 	
 	private  Integer codigo;
 	private String descricao;
