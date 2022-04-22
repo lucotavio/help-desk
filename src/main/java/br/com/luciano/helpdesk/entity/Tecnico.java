@@ -2,16 +2,21 @@ package br.com.luciano.helpdesk.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Entity
+@Table(name = "PESSOA")
 public class Tecnico extends Pessoa{
 	
+	private static final long serialVersionUID = 1L;
+	
+	@Getter
+	@Setter
+	@OneToMany(mappedBy = "tecnico")
 	private List<Chamado> chamados = new ArrayList<>();
 	
 	
