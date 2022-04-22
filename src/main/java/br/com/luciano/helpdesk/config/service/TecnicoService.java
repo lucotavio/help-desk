@@ -1,5 +1,7 @@
 package br.com.luciano.helpdesk.config.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class TecnicoService {
 	
 	public Tecnico findById(Integer id) {
 		return repository.findById(id).orElse(null);
+	}
+	
+	public List<Tecnico> findAll(){
+		return repository.findAll();
 	}
 
 }
