@@ -11,9 +11,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import br.com.luciano.helpdesk.entity.Tecnico;
 import br.com.luciano.helpdesk.enumeration.Perfil;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
+@NoArgsConstructor
 public class TecnicoDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -37,9 +38,10 @@ public class TecnicoDto implements Serializable{
 	@Getter
 	@Setter
 	private String senha;
-
 	private Set<Integer> perfis = new HashSet<>();	
 
+	@Getter
+	@Setter
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataCriacao = LocalDate.now();
 
