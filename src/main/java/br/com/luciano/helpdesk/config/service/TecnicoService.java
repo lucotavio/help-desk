@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.luciano.helpdesk.dto.TecnicoDto;
 import br.com.luciano.helpdesk.entity.Tecnico;
 import br.com.luciano.helpdesk.repository.TecnicoRepository;
 
@@ -23,6 +24,12 @@ public class TecnicoService {
 	}
 	
 	public Tecnico create(Tecnico tecnico) {
+		return repository.save(tecnico);
+	}
+	
+	public Tecnico update(Integer id, Tecnico tecnico) {
+		
+		tecnico.setId(id);
 		return repository.save(tecnico);
 	}
 
